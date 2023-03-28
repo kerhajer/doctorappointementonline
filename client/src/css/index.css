@@ -1,0 +1,121 @@
+
+ 
+
+  
+  ::selection {
+    color: #fff;
+    background: #E10DB1;
+  }
+  
+  
+  /* very messy "grid" styles */
+  
+  
+
+  .grid-20 {
+    width:5%;
+    vertical-align: middle;
+    height: 3rem;
+    font-size: 1rem;
+    font-family: Work Sans,Arial,sans-serif;
+
+    padding: 0 1rem;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 3.125rem;
+    background: #00b39b;
+    cursor: pointer;
+    text-align: center;
+    font-weight: 300;
+    color: black;
+    transition: color 0.2s ease-in-out, background 0.2s ease-in-out;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+  }
+
+  
+  .grid-100 {
+    width: 150px;
+    vertical-align: middle;
+    height: 3rem;
+    font-size: 1.4rem;
+  }
+  
+  
+  /* input and label styles*/
+  
+  button  {
+    font-family: Work Sans,Arial,sans-serif;
+
+    padding: 0 1rem;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 3.125rem;
+    background: #00b39b;
+    cursor: pointer;
+    text-align: center;
+    font-weight: 300;
+    color: black;
+    transition: color 0.2s ease-in-out, background 0.2s ease-in-out;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+
+  }
+  
+  button:hover {
+    background: #00b39b;
+    color: #232323;
+
+   
+  }
+  
+  .search-label {
+    width: 5%;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+
+  }
+  
+
+  
+  
+
+
+  
+  
+  /* search button and icon styles */
+  
+  
+
+  
+  .btn {
+    font-family: Work Sans,Arial,sans-serif;
+
+    font-size: 1.1rem;
+    border: 0;
+    padding: 0 0.3em 0 0;
+    background: #00b39b;
+    color: black;
+    font-weight: 600;
+    transition: background 0.25s ease-in-out;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+    border-color:#00b39b;
+  }
+  
+  .btn:hover,
+  .btn:focus,
+  .btn:active {
+    outline: 0;
+    background:#00b39b ;
+  }
+  
+  .btn:active {
+    transform: translateY(1px);
+  }
+  
+
+ 
+  
+
+  

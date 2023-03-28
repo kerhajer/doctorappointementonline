@@ -1,0 +1,109 @@
+
+   
+    
+   
+
+ .cards{
+    overflow-x: 'scroll';
+    scroll-snap-type:' x mandatory';
+ }  
+    
+
+
+
+ .cards::-webkit-scrollbar {
+    height: 12px;
+  }
+  
+  .cards::-webkit-scrollbar-thumb,
+  .cards::-webkit-scrollbar-track {
+    border-radius: 92px;
+  }
+  
+  .cards::-webkit-scrollbar-thumb {
+    background: var(--darkorange);
+  }
+  
+  .cards::-webkit-scrollbar-track {
+    background: var(--thumb);
+  }
+.imgg{
+
+
+
+
+    display: inline-block;
+    width: 88px;
+    height: 88px;
+    border-radius: 50%;
+  
+    object-fit: cover;
+
+        margin: 0 auto;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      
+}
+
+
+
+
+
+  .card{
+
+
+    font-family: Work Sans,Arial,sans-serif;
+
+    padding: 1.5em 0.5em 0.5em;
+    text-align: center;
+    border-radius: 2em;
+   font-size: 20px;
+    border:#777777;
+    transition: all 1s;
+    cursor: pointer;
+    background:white;
+    margin:0;
+    max-width:300px;
+    min-width:150px;
+    margin: 30px;
+    box-shadow:
+      5px 0 0 0 fade(#ccc,30%),
+      -5px 0 0 0 fade(#ccc,30%),
+      0 5px 0 0 fade(#ccc,30%);
+      transition: transform 0.2s;
+      scroll-snap-align: start;
+       }
+  
+  
+  .card:hover{
+  
+     -webkit-box-shadow: 3px 5px 17px -4px #777777; 
+  box-shadow: 3px 5px 17px -4px #777777;
+  cursor: pointer;
+	transform: scale(1.1);
+  }
+  
+  .ratings i {
+  
+    color:#00b39b;
+  }
+
+  .book {
+    background-color: #00b39b;
+    height: 25px;
+    border-radius: 22px;
+   font-size: 10px;
+    display: flex;
+    -webkit-box-align: start;
+    align-items: center;
+  }
+  
+  .high {
+
+    height: 25px;
+    border-radius: 22px;
+     font-size: 10px;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+
+  }
