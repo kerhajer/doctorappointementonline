@@ -89,7 +89,7 @@ const Appointement = () => {
           >
            
 
-            <TableCell align='start'>{row.owner.name.toUpperCase() } {row.owner.toUpperCase()} </TableCell>
+            <TableCell align='start'>{row.owner.name} {row.owner.lastname} </TableCell>
             <TableCell align='start'>{row.owner.phonenumber}</TableCell>
             <TableCell align='start'>{row.date}</TableCell>
             <TableCell align='start'>{row.time}</TableCell>
@@ -129,10 +129,10 @@ const Appointement = () => {
           >
             <TableCell component="th" scope="row">
 
-              <img  style= {{width:'25px',height:'25px',borderRadius:'100%',marginLeft:'25px'}} src={roww.DoctorInfo.Image.Image.imgUrl}/><br/>
-            <small>{roww.DoctorInfo.name.toUpperCase()}{roww.DoctorInfo.lastname.toUpperCase()}</small> <br/>
+              <img  style= {{width:'25px',height:'25px',borderRadius:'100%',marginLeft:'30px'}} src={roww.DoctorInfo.Image.Image.imgUrl}/><br/>
+            <small>{roww.DoctorInfo.name}{roww.DoctorInfo.lastname}</small> <br/>
             <small><i className="fas fa-phone-square"></i>{roww.DoctorInfo.phonenumber}</small> <br/>
-            <small>{roww.DoctorInfo.specialization}</small> <br/>
+            <small><i className="fas fa-phone-square"></i>{roww.DoctorInfo.specialization}</small> <br/>
 
             <small> <i className="fas fa-map-marker-alt"></i> {roww.DoctorInfo.city}   </small> 
 

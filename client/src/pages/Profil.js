@@ -24,7 +24,7 @@ const Profil = ({user} ) => {
             <div style={{marginLeft:'25px'}} >     
               <h5  style={{fontSize:'25px',textAlign:'center'}} className="mb-0"> {user.name} {user.lastname}  </h5> 
               <small>  {user.age} years old  </small> <br/>
-              <small>  {user.email} years old  </small><br/>
+              <small>  {user.email}   </small><br/>
 
 
 
