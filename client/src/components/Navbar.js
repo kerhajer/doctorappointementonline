@@ -183,11 +183,11 @@ export default function MenuAppBar() {
                   <MenuItem  style={{
                     color: '#747474', fontFamily: 'Work Sans,Arial,sans-serif', fontSize: '.9375rem',
                     fontWeight: ' 400'
-                  }} onClick={handleClose} > Doctor  </MenuItem>
+                  }} onClick={handleClose} > profile  </MenuItem>
                   <MenuItem  style={{
                     color: '#747474', fontFamily: 'Work Sans,Arial,sans-serif', fontSize: '.9375rem',
                     fontWeight: ' 400'
-                  }} onClick={handleClose} > Patient  </MenuItem>
+                  }} onClick={handleClose} > Setting account </MenuItem>
 
 
 

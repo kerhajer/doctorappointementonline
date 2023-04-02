@@ -106,16 +106,16 @@ const getAllDoctors = async(req,res)=>{
     const updatedoctorprofile=async (req, res) => {
 
         try {
-          const user = await User.findByIdAndUpdate({_id:req.params.id}, { $set: { ...req.body } },{new:true});
+          const updatedUser = await User.findByIdAndUpdate({_id:req.params.id}, { $set: { ...req.body } },{new:true});
           res.status(200).send({
             success: true,
             message: "Doctor profile updated successfully",
-            data: user,
+            data: updatedUser ,
           });
         } catch (error) {
           res
             .status(500)
-            .send({ message: "Error getting doctor info", success: false, error });
+            .send({ message: "Error updating", success: false, error });
         }
       };
 

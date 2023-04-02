@@ -19,8 +19,8 @@ const Updatecard = ({Appointement}) => {
     const [updatedapp, setUpdatedapp] = useState({
         _id: Appointement._id,
         
-        time:'Appointement.time',
-        date:'Appointement.date',
+        time:Appointement.time,
+        date:Appointement.date,
         status:''
 
     })

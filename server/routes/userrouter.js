@@ -11,7 +11,7 @@ router.post('/Register',Datavalidation, Usercontroller.Register )
 router.post('/Login',Usercontroller.Login)
 router.get('/' ,Usercontroller.getAllDoctors )
 router.get('/Doctorprofile/:idDoctor', Usercontroller.getdoctorinfobyid)
-router.put('/:id',Usercontroller.updatedoctorprofile )
+router.put('/:id',Datavalidation,Usercontroller.updatedoctorprofile )
 
 
 

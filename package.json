@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build": "npm run build",
+
     "test": "echo \"Error: no test specified\" && exit 1",
     "client": " npm start --prefix client",
     "server": " cd server && nodemon index --ignore client",
