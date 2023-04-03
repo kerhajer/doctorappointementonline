@@ -5,7 +5,7 @@ const appointmentModel = require('./models/appointementmodel');
 const app = express()
 var cors = require('cors')
 
-
+const path =require('path')
 
 require('dotenv').config()
 
@@ -24,7 +24,8 @@ mongoose.connect(process.env.MONGO_URI, err=> err? console.log(err) : console.lo
 }));
 app.use('/api/users',userrouuter)
 app.use('/api/appointements',appointmentrouter)
-
+ app.use(express.static(path.join(__dirname,'./client/build')))
+ app.get('*',function(req,res){res.sendFile(path.join(__dirname,'./client/build/index.html'))})
 
 const PORT = process.env.PORT || 7000;
 app.listen(PORT, err=> err? console.log(err) : console.log(`Server is running on ${PORT}...`))
