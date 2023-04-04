@@ -4,19 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-<<<<<<< HEAD
-
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "client": " npm start --prefix client",
-    "server": " cd server && nodemon index --ignore client",
-    "dev": "concurrently \"npm run server\" \" npm run client\""
-=======
     "test":"echo \"Error: no test specified\" && exit 1",
-    "start":"node index.js",
     "client":"npm start --prefix ./client",
     "server":"nodemon index --ignore client",
     "dev":"concurrently \"npm run server\" \" npm run client\""
->>>>>>> 24c41b4affe26c269369169da298c994a80f8861
   },
   "keywords": [],
   "author": "",
