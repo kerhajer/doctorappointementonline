@@ -4,15 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-
     "test": "echo \"Error: no test specified\" && exit 1",
     "client": " npm start --prefix client",
     "server": " cd server && nodemon index --ignore client",
-    "dev": "concurrently \"npm run server\" \" npm run client\""
+    "dev": "concurrently \"npm run server\" \" npm run client\"",
+    "start": "node index.js",
+    "build": "react-scripts build"
   },
   "keywords": [],
   "author": "",
-
   "license": "ISC",
   "dependencies": {
     "bcryptjs": "^2.4.3",
@@ -24,6 +24,7 @@
     "express-fileupload": "^1.4.0",
     "express-validator": "^6.15.0",
     "jsonwebtoken": "^9.0.0",
-    "mongoose": "^6.9.3"
+    "mongoose": "^6.9.3",
+    "path": "^0.12.7"
   }
 }

@@ -6,7 +6,6 @@ import Avatar from '@mui/material/Avatar';
 import TextField from '@mui/material/TextField';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
-import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import InputLabel from '@mui/material/InputLabel';
@@ -75,26 +74,10 @@ const Updateddoctorprofile = ({user}) => {
   const Updating = (e) => {
     e.preventDefault()
 
-    const formData= new FormData()
-    formData.append('Image',image)
-    formData.append('email',updatedUser.email)
-    formData.append('address',updatedUser.address)
-    formData.append('password',updatedUser.password)
-    formData.append('age',updatedUser.age)
-    formData.append('phonenumber',updatedUser.phonenumber)
-    formData.append('city',updatedUser.city)
-    formData.append('name',updatedUser.name)
-    formData.append('lastname',updatedUser.lastname)
+    dispatch(updatedoctorprofile(updatedUser))
 
-    formData.append('specialization',updatedUser.specialization)
-    formData.append('experience',updatedUser.experience)
-    formData.append('feePerCunsultation',updatedUser.feePerCunsultation)
-
-
-    dispatch(updatedoctorprofile(formData))
-
+navigate('/Doctorprofile/:idDoctor')
    
-    navigate('/Doctorprofile')
 
   }
 
@@ -124,19 +107,20 @@ const Updateddoctorprofile = ({user}) => {
               <Grid container spacing={2}>
                 <Grid item xs={12} sm={6}>
                   <TextField
-
+                    defaultValue={user.name}
                     onChange={HandleChange}
                     autoComplete="given-name"
                     name="name"
                     required
                     fullWidth
-                    id="Name"
+                    id="name"
                     label="Name"
                     autoFocus
                   />
                 </Grid>
                 <Grid item xs={12} sm={6}>
                   <TextField
+                    defaultValue={user.lastname}
 
                     onChange={HandleChange}
                     autoComplete="given-name"
@@ -150,6 +134,8 @@ const Updateddoctorprofile = ({user}) => {
                 </Grid>
                 <Grid item xs={12} sm={6}>
                   <TextField
+                                      defaultValue={user.age}
+
                     onChange={HandleChange}
                     required
                     fullWidth
@@ -161,6 +147,8 @@ const Updateddoctorprofile = ({user}) => {
                 </Grid>
                 <Grid item xs={12}>
                   <TextField
+                    defaultValue={user.email}
+
                     onChange={HandleChange}
                     required
                     fullWidth
@@ -172,6 +160,8 @@ const Updateddoctorprofile = ({user}) => {
                 </Grid>
                 <Grid item xs={12}>
                   <TextField
+                    defaultValue={user.password}
+
                     onChange={HandleChange}
                     required
                     fullWidth
@@ -184,6 +174,8 @@ const Updateddoctorprofile = ({user}) => {
                 </Grid>
                 <Grid item xs={12}>
                   <TextField
+                        defaultValue={user.address}
+
                     onChange={HandleChange}
                     required
                     fullWidth
@@ -196,6 +188,8 @@ const Updateddoctorprofile = ({user}) => {
 
                 <Grid item xs={12}>
                   <TextField
+            defaultValue={user.phonenumber}
+
                     onChange={HandleChange}
                     required
                     fullWidth
@@ -206,7 +200,8 @@ const Updateddoctorprofile = ({user}) => {
                   />
                 </Grid>
               <br/>  <br/>
-              <input    style={{marginLeft:'20px',marginTop:'13px',color:'green'}} onChange={HandleChangeimage} name='Image'  type='file' accept='image/*'/>
+              <input    style={{marginLeft:'20px',marginTop:'13px',color:'green'}}    
+onChange={HandleChangeimage} name='Image'  type='file' accept='image/*'/>
 
               </Grid>
 
@@ -214,6 +209,8 @@ const Updateddoctorprofile = ({user}) => {
                   <FormControl fullWidth>
                     <InputLabel id="demo-simple-select-label">Doctorpecialization</InputLabel>
                     <Select
+                     defaultValue={user.specialization}
+
                       name='specialization'
                       labelId="specialization"
                       id="specialization"
@@ -276,7 +273,8 @@ const Updateddoctorprofile = ({user}) => {
                   <FormControl fullWidth>
                     <InputLabel id="demo-simple-select-label">city</InputLabel>
                     <Select
-                    
+                              defaultValue={user.city}
+
                       name='city'
                       labelId="city"
                       id="city"
@@ -353,6 +351,8 @@ const Updateddoctorprofile = ({user}) => {
 
 
                 <TextField
+                     defaultValue={user.experience}
+
                   onChange={HandleChange}
                   required
                   fullWidth
@@ -364,6 +364,8 @@ const Updateddoctorprofile = ({user}) => {
        
 
                 <TextField
+                defaultValue={user.feePerCunsultation}
+
                   onChange={HandleChange}
                   required
                   fullWidth
