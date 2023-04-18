@@ -48,6 +48,7 @@ export const getdoctorinfobyid= createAsyncThunk('user/getdoctorinfobyid', async
 export const updatedoctorprofile= createAsyncThunk('user/updatedoctorprofile', async (updatedUser,{rejectWithValue})=>{
     try {
         const {data} = await axios.put(`http://localhost:5000/api/users/${updatedUser._id}`,updatedUser)
+
         return data
     } catch (error) {
        return rejectWithValue(error.response.data.message)
@@ -169,7 +170,7 @@ export const updatedoctorprofile= createAsyncThunk('user/updatedoctorprofile', a
         [updatedoctorprofile.fulfilled]: (state,action)=>{
             state.isLoading = false
 
-            state.user = state.users.map(usr=> (usr._id == action.payload._id)? {...usr,...action.payload} : usr )
+            state.user = state.users.map(user=> (user._id == action.payload._id)? {...user,...action.payload} : user )
 
         },
         [updatedoctorprofile.rejected]: (state,action)=>{

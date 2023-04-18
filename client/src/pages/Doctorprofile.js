@@ -3,7 +3,8 @@ import '../css/doctor.css';
 import { useSelector } from 'react-redux'
 import { AllDoctors } from '../Redux/UserSlice';
 import { useDispatch } from 'react-redux'
-import Updateddoctorprofile from "../components/Updatedoctorprofile";
+import Updateprofile from "../components/Updateprofile"
+
 const Doctorprofile = ({ user }) => {
     const users = useSelector(state => state.AuthReducer.users)
 
@@ -189,7 +190,7 @@ const Doctorprofile = ({ user }) => {
 
 
                         <div className="user-setting"   id="tab1">
-
+                      <Updateprofile user={user} />
                             </div>
 
                     </div>
